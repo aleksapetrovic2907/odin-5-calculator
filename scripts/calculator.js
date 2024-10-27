@@ -13,6 +13,15 @@ const calculator = {
         this[targetOp] += digit;
     },
 
+    selectOperation(operationID) {
+        switch (operationID) {
+            case "add": this.operation = this.add; break;
+            case "subtract": this.operation = this.subtract; break;
+            case "multiply": this.operation = this.multiply; break;
+            case "divide": this.operation = this.divide; break;
+        }
+    },
+
     clear() {
         this.op1 = this.op2 = "";
         this.operation = null;
