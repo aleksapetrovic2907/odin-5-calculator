@@ -17,6 +17,7 @@ const calculator = {
         if (this.op1.length == 0) return;
 
         if (this.isOperable()) {
+            // TODO:
             // Perform operation and set result as operand1
             // before selecting new operation.
         }
@@ -27,6 +28,14 @@ const calculator = {
             case "multiply": this.operation = this.multiply; break;
             case "divide": this.operation = this.divide; break;
         }
+    },
+
+    performOperation() {
+        if (!this.isOperable()) return;
+
+        this.op1 = operation();
+        this.op2 = "";
+        this.operation = null;
     },
 
     clear() {
