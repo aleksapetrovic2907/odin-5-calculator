@@ -10,12 +10,21 @@ function initialize() {
     operationsContainer = document.querySelector("#operations-container");
 
     digitsContainer.addEventListener("click", (event) => {
-        calculator.addDigitToOperand(event.target.id);
-        // Update display
+        if (event.target !== digitsContainer) {
+            calculator.addDigitToOperand(event.target.id);
+            updateDisplay();
+        }
     })
 
     operationsContainer.addEventListener("click", (event) => {
-        calculator.selectOperation(event.target.id);
-        // Update display
+        if (event.target !== operationsContainer) {
+            calculator.selectOperation(event.target.id);
+            updateDisplay();
+        }
     })
+}
+
+function updateDisplay() {
+    let targetOp = calculator.op2.length > 0 ? "op2" : "op1";
+    display.textContent = calculator[targetOp];
 }
