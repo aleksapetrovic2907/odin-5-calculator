@@ -8,4 +8,14 @@ function initialize() {
     display = document.querySelector("#display");
     digitsContainer = document.querySelector("#digits-container");
     operationsContainer = document.querySelector("#operations-container");
+
+    digitsContainer.addEventListener("click", (event) => {
+        // Tell calculator to apply digit to target operand
+        // Update display
+    })
+
+    operationsContainer.addEventListener("click", (event) => {
+        // Tell calculator that an operation has been selected
+        // Update display
+    })
 }
