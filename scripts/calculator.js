@@ -14,6 +14,8 @@ const calculator = {
     },
 
     selectOperation(operationID) {
+        if (this.op1.length == 0) return;
+
         switch (operationID) {
             case "add": this.operation = this.add; break;
             case "subtract": this.operation = this.subtract; break;
