@@ -10,7 +10,7 @@ function initialize() {
     operationsContainer = document.querySelector("#operations-container");
 
     digitsContainer.addEventListener("click", (event) => {
-        // Tell calculator to apply digit to target operand
+        calculator.addDigitToOperand(event.target.id);
         // Update display
     })
 
