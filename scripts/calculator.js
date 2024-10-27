@@ -17,9 +17,7 @@ const calculator = {
         if (this.op1.length == 0) return;
 
         if (this.isOperable()) {
-            // TODO:
-            // Perform operation and set result as operand1
-            // before selecting new operation.
+            this.performOperation();
         }
 
         switch (operationID) {
