@@ -13,18 +13,18 @@ const calculator = {
     },
 
     add() {
-        return this.op1 + this.op2;
+        return Number(this.op1) + Number(this.op2);
     },
 
     subtract() {
-        return this.op1 - this.op2;
+        return Number(this.op1) - Number(this.op2);
     },
 
     multiply() {
-        return this.op1 * this.op2;
+        return Number(this.op1) * Number(this.op2);
     },
 
     divide() {
-        return this.op1 / this.op2;
+        return Number(this.op1) / Number(this.op2);
     },
 }
