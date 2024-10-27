@@ -15,7 +15,7 @@ function initialize() {
     })
 
     operationsContainer.addEventListener("click", (event) => {
-        // Tell calculator that an operation has been selected
+        calculator.selectOperation(event.target.id);
         // Update display
     })
 }
