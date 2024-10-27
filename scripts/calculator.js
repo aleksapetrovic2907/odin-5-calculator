@@ -31,7 +31,7 @@ const calculator = {
     performOperation() {
         if (!this.isOperable()) return;
 
-        this.op1 = this.operation();
+        this.op1 = this.operation() + "";
         this.op2 = "";
         this.operation = null;
     },
